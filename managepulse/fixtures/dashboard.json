@@ -1,0 +1,45 @@
+[
+	{
+		"cards": [
+			{
+				"card": "MP Total Respostas"
+			},
+			{
+				"card": "MP NPS Score"
+			},
+			{
+				"card": "MP Média NPS"
+			},
+			{
+				"card": "MP Média Geral"
+			},
+			{
+				"card": "MP Pedidos de Contato"
+			}
+		],
+		"charts": [
+			{
+				"chart": "MP Respostas por Unidade",
+				"width": "Half"
+			},
+			{
+				"chart": "MP NPS Médio por Unidade",
+				"width": "Half"
+			},
+			{
+				"chart": "MP Respostas no Tempo",
+				"width": "Half"
+			},
+			{
+				"chart": "MP Respostas por Canal",
+				"width": "Half"
+			}
+		],
+		"dashboard_name": "ManagePulse",
+		"doctype": "Dashboard",
+		"is_default": 0,
+		"is_standard": 0,
+		"module": "ManagePulse",
+		"name": "ManagePulse"
+	}
+]

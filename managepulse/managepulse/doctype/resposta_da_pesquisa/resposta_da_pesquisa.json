@@ -1,0 +1,272 @@
+{
+	"actions": [],
+	"allow_import": 1,
+	"autoname": "naming_series:",
+	"creation": "2026-07-14 18:00:00.000000",
+	"default_view": "List",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"section_identificacao",
+		"naming_series",
+		"modelo",
+		"tipo_pesquisa",
+		"company",
+		"column_break_id",
+		"data_resposta",
+		"canal",
+		"status",
+		"section_servicos",
+		"servicos_utilizados",
+		"section_avaliacoes",
+		"itens",
+		"section_nps",
+		"texto_nps",
+		"nps",
+		"media_geral",
+		"column_break_nps",
+		"comentarios",
+		"section_contato",
+		"deseja_contato",
+		"e_anonimo",
+		"column_break_contato",
+		"nome_contato",
+		"telefone",
+		"nome_acompanhante"
+	],
+	"fields": [
+		{
+			"fieldname": "section_identificacao",
+			"fieldtype": "Section Break",
+			"label": "Identificação"
+		},
+		{
+			"default": "MPS-.YYYY.-.#####",
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"hidden": 1,
+			"label": "Série",
+			"options": "MPS-.YYYY.-.#####",
+			"reqd": 1
+		},
+		{
+			"fieldname": "modelo",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Modelo de Pesquisa",
+			"options": "Modelo de Pesquisa",
+			"reqd": 1
+		},
+		{
+			"fetch_from": "modelo.tipo_pesquisa",
+			"fieldname": "tipo_pesquisa",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Tipo de Pesquisa",
+			"read_only": 1
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Unidade (Company)",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_id",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Today",
+			"fieldname": "data_resposta",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Data da Resposta",
+			"reqd": 1
+		},
+		{
+			"default": "Manual Desk",
+			"fieldname": "canal",
+			"fieldtype": "Select",
+			"in_standard_filter": 1,
+			"label": "Canal",
+			"options": "Manual Desk\nPúblico\nTotem",
+			"reqd": 1
+		},
+		{
+			"default": "Recebida",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Status",
+			"options": "Recebida\nEm análise\nEncerrada",
+			"reqd": 1
+		},
+		{
+			"description": "Serviços que o respondente marcou na pergunta 1. Só esses entram nas avaliações.",
+			"fieldname": "section_servicos",
+			"fieldtype": "Section Break",
+			"label": "Serviços utilizados"
+		},
+		{
+			"fieldname": "servicos_utilizados",
+			"fieldtype": "Table",
+			"label": "Serviços utilizados",
+			"options": "Servico Utilizado da Resposta"
+		},
+		{
+			"fieldname": "section_avaliacoes",
+			"fieldtype": "Section Break",
+			"label": "Avaliações por critério"
+		},
+		{
+			"fieldname": "itens",
+			"fieldtype": "Table",
+			"label": "Itens",
+			"options": "Item da Resposta"
+		},
+		{
+			"fieldname": "section_nps",
+			"fieldtype": "Section Break",
+			"label": "NPS e comentários"
+		},
+		{
+			"fetch_from": "modelo.texto_nps",
+			"fieldname": "texto_nps",
+			"fieldtype": "Small Text",
+			"label": "Pergunta NPS",
+			"read_only": 1
+		},
+		{
+			"description": "0 a 10",
+			"fieldname": "nps",
+			"fieldtype": "Int",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "NPS",
+			"non_negative": 1
+		},
+		{
+			"fieldname": "media_geral",
+			"fieldtype": "Float",
+			"in_list_view": 1,
+			"label": "Média geral",
+			"precision": "2",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_nps",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "comentarios",
+			"fieldtype": "Text",
+			"label": "Críticas, sugestões e elogios"
+		},
+		{
+			"fieldname": "section_contato",
+			"fieldtype": "Section Break",
+			"label": "Contato (opcional)"
+		},
+		{
+			"default": "0",
+			"fieldname": "deseja_contato",
+			"fieldtype": "Check",
+			"in_standard_filter": 1,
+			"label": "Deseja retorno de contato"
+		},
+		{
+			"default": "1",
+			"fieldname": "e_anonimo",
+			"fieldtype": "Check",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Anônimo",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_contato",
+			"fieldtype": "Column Break"
+		},
+		{
+			"depends_on": "eval:doc.deseja_contato",
+			"fieldname": "nome_contato",
+			"fieldtype": "Data",
+			"label": "Nome",
+			"mandatory_depends_on": "eval:doc.deseja_contato"
+		},
+		{
+			"depends_on": "eval:doc.deseja_contato",
+			"fieldname": "telefone",
+			"fieldtype": "Data",
+			"label": "Telefone",
+			"mandatory_depends_on": "eval:doc.deseja_contato"
+		},
+		{
+			"depends_on": "eval:doc.deseja_contato",
+			"fieldname": "nome_acompanhante",
+			"fieldtype": "Data",
+			"label": "Acompanhante"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-07-14 18:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "ManagePulse",
+	"name": "Resposta da Pesquisa",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "ManagePulse Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 0,
+			"delete": 0,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "ManagePulse Viewer",
+			"share": 0,
+			"write": 0
+		}
+	],
+	"quick_entry": 0,
+	"search_fields": "modelo,company,status",
+	"show_name_in_global_search": 1,
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 0,
+	"track_seen": 1
+}

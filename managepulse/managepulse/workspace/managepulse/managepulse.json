@@ -1,0 +1,175 @@
+{
+	"charts": [
+		{
+			"chart_name": "MP Respostas por Unidade",
+			"label": "Respostas por Unidade"
+		},
+		{
+			"chart_name": "MP NPS Médio por Unidade",
+			"label": "NPS Médio por Unidade"
+		},
+		{
+			"chart_name": "MP Respostas no Tempo",
+			"label": "Respostas no Tempo"
+		},
+		{
+			"chart_name": "MP Respostas por Canal",
+			"label": "Respostas por Canal"
+		}
+	],
+	"content": "[{\"id\":\"header_mp\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Gestor Satisfação</span>\",\"col\":12}},{\"id\":\"nc_total\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"MP Total Respostas\",\"col\":3}},{\"id\":\"nc_nps_score\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"MP NPS Score\",\"col\":3}},{\"id\":\"nc_media_nps\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"MP Média NPS\",\"col\":3}},{\"id\":\"nc_contato\",\"type\":\"number_card\",\"data\":{\"number_card_name\":\"MP Pedidos de Contato\",\"col\":3}},{\"id\":\"spacer1\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"chart_unidade\",\"type\":\"chart\",\"data\":{\"chart_name\":\"MP Respostas por Unidade\",\"col\":6}},{\"id\":\"chart_nps\",\"type\":\"chart\",\"data\":{\"chart_name\":\"MP NPS Médio por Unidade\",\"col\":6}},{\"id\":\"chart_tempo\",\"type\":\"chart\",\"data\":{\"chart_name\":\"MP Respostas no Tempo\",\"col\":6}},{\"id\":\"chart_canal\",\"type\":\"chart\",\"data\":{\"chart_name\":\"MP Respostas por Canal\",\"col\":6}},{\"id\":\"header_atalhos\",\"type\":\"header\",\"data\":{\"text\":\"Atalhos\",\"col\":12}},{\"id\":\"shortcut_modelo\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Modelos de Pesquisa\",\"col\":3}},{\"id\":\"shortcut_resposta\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Respostas da Pesquisa\",\"col\":3}},{\"id\":\"shortcut_analise\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Analise de Satisfacao\",\"col\":3}},{\"id\":\"shortcut_criterio\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Satisfacao por Criterio\",\"col\":3}},{\"id\":\"shortcut_dash\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Dashboard ManagePulse\",\"col\":3}}]",
+	"creation": "2026-07-14 18:00:00.000000",
+	"custom_blocks": [],
+	"docstatus": 0,
+	"doctype": "Workspace",
+	"for_user": "",
+	"hide_custom": 0,
+	"icon": "survey",
+	"idx": 0,
+	"is_hidden": 1,
+	"label": "ManagePulse",
+	"links": [
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Cadastros",
+			"link_count": 2,
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Modelo de Pesquisa",
+			"link_count": 0,
+			"link_to": "Modelo de Pesquisa",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Resposta da Pesquisa",
+			"link_count": 0,
+			"link_to": "Resposta da Pesquisa",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Relatórios",
+			"link_count": 2,
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 1,
+			"label": "Análise de Satisfação",
+			"link_count": 0,
+			"link_to": "Analise de Satisfacao",
+			"link_type": "Report",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 1,
+			"label": "Satisfação por Critério",
+			"link_count": 0,
+			"link_to": "Satisfacao por Criterio",
+			"link_type": "Report",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Dashboards",
+			"link_count": 1,
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Dashboard ManagePulse",
+			"link_count": 0,
+			"link_to": "ManagePulse",
+			"link_type": "Dashboard",
+			"onboard": 1,
+			"type": "Link"
+		}
+	],
+	"modified": "2026-07-15 12:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "ManagePulse",
+	"name": "ManagePulse",
+	"number_cards": [
+		{
+			"label": "Total Respostas",
+			"number_card_name": "MP Total Respostas"
+		},
+		{
+			"label": "NPS Score",
+			"number_card_name": "MP NPS Score"
+		},
+		{
+			"label": "Média NPS",
+			"number_card_name": "MP Média NPS"
+		},
+		{
+			"label": "Pedidos de Contato",
+			"number_card_name": "MP Pedidos de Contato"
+		}
+	],
+	"owner": "Administrator",
+	"parent_page": "",
+	"public": 1,
+	"quick_lists": [],
+	"roles": [],
+	"sequence_id": 25.0,
+	"shortcuts": [
+		{
+			"color": "Blue",
+			"doc_view": "List",
+			"label": "Modelos de Pesquisa",
+			"link_to": "Modelo de Pesquisa",
+			"type": "DocType"
+		},
+		{
+			"color": "Green",
+			"doc_view": "List",
+			"label": "Respostas da Pesquisa",
+			"link_to": "Resposta da Pesquisa",
+			"type": "DocType"
+		},
+		{
+			"color": "Purple",
+			"label": "Analise de Satisfacao",
+			"link_to": "Analise de Satisfacao",
+			"stats_filter": "",
+			"type": "Report"
+		},
+		{
+			"color": "Cyan",
+			"label": "Satisfacao por Criterio",
+			"link_to": "Satisfacao por Criterio",
+			"stats_filter": "",
+			"type": "Report"
+		},
+		{
+			"color": "Orange",
+			"label": "Dashboard ManagePulse",
+			"link_to": "ManagePulse",
+			"type": "Dashboard"
+		}
+	],
+	"title": "ManagePulse"
+}

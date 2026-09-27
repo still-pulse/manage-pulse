@@ -1,0 +1,187 @@
+{
+	"actions": [],
+	"allow_import": 1,
+	"allow_rename": 1,
+	"autoname": "field:titulo",
+	"creation": "2026-07-14 18:00:00.000000",
+	"default_view": "List",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"section_geral",
+		"titulo",
+		"slug",
+		"tipo_pesquisa",
+		"ativo",
+		"column_break_geral",
+		"company",
+		"permite_contato",
+		"section_unidades",
+		"unidades_aplicaveis",
+		"section_instrucoes",
+		"instrucoes",
+		"texto_nps",
+		"section_perguntas",
+		"perguntas"
+	],
+	"fields": [
+		{
+			"fieldname": "section_geral",
+			"fieldtype": "Section Break",
+			"label": "Geral"
+		},
+		{
+			"fieldname": "titulo",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Título",
+			"reqd": 1,
+			"unique": 1
+		},
+		{
+			"description": "Identificador para URL pública (fase 2). Ex.: upa-pronto-atendimento",
+			"fieldname": "slug",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Slug",
+			"reqd": 1,
+			"unique": 1
+		},
+		{
+			"fieldname": "tipo_pesquisa",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Tipo de Pesquisa",
+			"options": "Pronto Atendimento\nObservação\nOutro",
+			"reqd": 1
+		},
+		{
+			"default": "1",
+			"fieldname": "ativo",
+			"fieldtype": "Check",
+			"in_list_view": 1,
+			"in_standard_filter": 1,
+			"label": "Ativo"
+		},
+		{
+			"fieldname": "column_break_geral",
+			"fieldtype": "Column Break"
+		},
+		{
+			"description": "Opcional. Company de referência do modelo (não restringe sozinha o uso).",
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"in_standard_filter": 1,
+			"label": "Company de referência",
+			"options": "Company"
+		},
+		{
+			"default": "1",
+			"description": "Permite que o respondente informe nome/telefone para retorno.",
+			"fieldname": "permite_contato",
+			"fieldtype": "Check",
+			"label": "Permite contato para retorno"
+		},
+		{
+			"description": "Se vazio, o modelo vale para qualquer unidade (Company). Se preenchido, só as listadas podem ser usadas na resposta.",
+			"fieldname": "section_unidades",
+			"fieldtype": "Section Break",
+			"label": "Aplicável a (unidades)"
+		},
+		{
+			"fieldname": "unidades_aplicaveis",
+			"fieldtype": "Table",
+			"label": "Unidades aplicáveis",
+			"options": "Unidade do Modelo"
+		},
+		{
+			"fieldname": "section_instrucoes",
+			"fieldtype": "Section Break",
+			"label": "Textos"
+		},
+		{
+			"fieldname": "instrucoes",
+			"fieldtype": "Text Editor",
+			"label": "Instruções"
+		},
+		{
+			"default": "Em uma escala de 0 a 10, o quanto você indicaria esta unidade a um amigo ou familiar?",
+			"fieldname": "texto_nps",
+			"fieldtype": "Small Text",
+			"label": "Texto da pergunta NPS",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_perguntas",
+			"fieldtype": "Section Break",
+			"label": "Perguntas (escala)"
+		},
+		{
+			"fieldname": "perguntas",
+			"fieldtype": "Table",
+			"label": "Perguntas",
+			"options": "Pergunta do Modelo",
+			"reqd": 1
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [
+		{
+			"link_doctype": "Resposta da Pesquisa",
+			"link_fieldname": "modelo"
+		}
+	],
+	"modified": "2026-07-14 18:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "ManagePulse",
+	"name": "Modelo de Pesquisa",
+	"naming_rule": "By fieldname",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "ManagePulse Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "ManagePulse Viewer",
+			"share": 0,
+			"write": 0
+		}
+	],
+	"quick_entry": 0,
+	"search_fields": "titulo,slug,tipo_pesquisa",
+	"show_name_in_global_search": 1,
+	"sort_field": "modified",
+	"sort_order": "DESC",
+	"states": [],
+	"title_field": "titulo",
+	"track_changes": 1
+}

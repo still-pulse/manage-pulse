@@ -1,0 +1,71 @@
+{
+	"actions": [],
+	"creation": "2026-07-14 18:00:00.000000",
+	"doctype": "DocType",
+	"editable_grid": 1,
+	"engine": "InnoDB",
+	"field_order": [
+		"secao",
+		"ordem_secao",
+		"criterio",
+		"tipo",
+		"obrigatorio"
+	],
+	"fields": [
+		{
+			"columns": 3,
+			"fieldname": "secao",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Seção",
+			"reqd": 1
+		},
+		{
+			"columns": 1,
+			"default": "1",
+			"fieldname": "ordem_secao",
+			"fieldtype": "Int",
+			"in_list_view": 1,
+			"label": "Ordem da Seção",
+			"reqd": 1
+		},
+		{
+			"columns": 3,
+			"fieldname": "criterio",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Critério",
+			"reqd": 1
+		},
+		{
+			"columns": 2,
+			"default": "Escala",
+			"fieldname": "tipo",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Tipo",
+			"options": "Escala\nNPS\nTexto",
+			"reqd": 1
+		},
+		{
+			"columns": 1,
+			"default": "1",
+			"fieldname": "obrigatorio",
+			"fieldtype": "Check",
+			"in_list_view": 1,
+			"label": "Obrigatório"
+		}
+	],
+	"istable": 1,
+	"links": [],
+	"modified": "2026-07-14 18:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "ManagePulse",
+	"name": "Pergunta do Modelo",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "idx",
+	"sort_order": "ASC",
+	"states": [],
+	"track_changes": 0
+}
